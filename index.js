@@ -7,7 +7,7 @@ const router = require('./router');
 const mongoose = require('mongoose');
 
 // db setup
-mongoose.connect('mongodb://localhost:auth/auth');
+mongoose.connect('mongodb://localhost:27017/auth', { useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true, });
 
 // app setup
 app.use(morgan('combined'));
